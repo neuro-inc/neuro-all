@@ -92,3 +92,5 @@ jobs:
         version: ${{ needs.lint.outputs.version }}
         start_line: "[comment]: # (release notes start)"
         head_line: "Neuro {version}\\s+\\({date}\\)\n====+\n?"
+        fix_issue_regex: "\\(\\[#(\\d+)\\]\\(https://github.com/neuro-inc/[^/]+/issues/\\1\\)\\)"
+        fix_issue_repl: "(#\\1)"
