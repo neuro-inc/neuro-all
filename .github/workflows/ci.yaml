@@ -44,6 +44,7 @@ jobs:
           lint-
     - name: Install dependencies
       run: |
+        pip install poetry
         poetry install
     - name: Run linters
       run: |
