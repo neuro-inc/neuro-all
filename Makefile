@@ -1,14 +1,14 @@
 .PHONY: setup init
 setup init:
 	poetry install
-	pre-commit install
+	poetry run pre-commit install
 
 .PHONY: fmt format
 fmt format:
 ifdef CI_LINT_RUN
-	pre-commit run --all-files --show-diff-on-failure
+	poetry run pre-commit run --all-files --show-diff-on-failure
 else
-	pre-commit run --all-files
+	poetry run pre-commit run --all-files
 endif
 
 
