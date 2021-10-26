@@ -81,16 +81,14 @@ jobs:
       uses: actions/setup-python@v2.2.2
     - name: Publish
       run: |
-        poetry publish --no-interaction --build -u __token__ -p ${{ secrets.PYPI_TOKEN }}
-    # - name: GitHub Release
-    #   uses: aio-libs/create-release@v1.2.2
-    #   with:
-    #     changes_file: CHANGELOG.md
-    #     name: Neuro Flow
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     pypi_token: ${{ secrets.PYPI_TOKEN }}
-    #     version_file: neuro_flow/__init__.py   # CLI has the same version
-    #     start_line: "[comment]: # (towncrier release notes start)"
-    #     head_line: "Neuro Flow {version}\\s+\\({date}\\)\n====+\n?"
-    #     fix_issue_regex: "\\(\\[#(\\d+)\\]\\(https://github.com/neuro-inc/neuro-flow/issues/\\1\\)\\)"
-    #     fix_issue_repl: "(#\\1)"
+        poetry build
+    - name: GitHub Release
+      uses: aio-libs/create-release@v1.2.2
+      with:
+        changes_file: CHANGELOG.md
+        name: Neuro
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        pypi_token: ${{ secrets.PYPI_TOKEN }}
+        version: ${{ needs.lint.outputs.version }}
+        start_line: "[comment]: # (release notes start)"
+        head_line: "Neuro {version}\\s+\\({date}\\)\n====+\n?"

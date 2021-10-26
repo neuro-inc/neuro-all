@@ -1,6 +1,7 @@
 .PHONY: setup init
 setup init:
 	poetry install
+	pre-commit install
 
 .PHONY: fmt format
 fmt format:

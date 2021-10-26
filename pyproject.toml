@@ -46,6 +46,9 @@ neuro-flow = "21.9"
 
 [tool.poetry.dev-dependencies]
 pytest = "6.2.5"
+all-repos = "1.21.2"
+pre-commit = "^2.15.0"
+click = "^8.0.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

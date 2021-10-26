@@ -1,0 +1,5 @@
+{
+  "neuro-extras": "git@github.com:neuro-inc/neuro-extras",
+  "neuro-flow": "git@github.com:neuro-inc/neuro-flow",
+  "platform-client-python": "git@github.com:neuro-inc/platform-client-python"
+}
