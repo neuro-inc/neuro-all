@@ -633,7 +633,7 @@ toml = ">=0.10.0"
 
 [[package]]
 name = "neuro-flow"
-version = "21.9"
+version = "21.10.0"
 description = "Pipelines system for neu.ro"
 category = "main"
 optional = false
@@ -653,7 +653,7 @@ neuro-extras = ">=21.9.3"
 pyyaml = ">=5.4"
 rich = ">=10.0,<11.0"
 typing-extensions = ">=3.10"
-yarl = ">=1.6.2,<1.7"
+yarl = ">=1.6.2,<1.8"
 
 [[package]]
 name = "neuro-sdk"
@@ -1087,7 +1087,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.2"
-content-hash = "bd1692b5074bcd9f4e56d229414f83b7061743fca7cfbd4d847c91cf31a75a7b"
+content-hash = "09a2e28683529462b035e9aa8ff261241a361414c64c98860ce4718cf8a7de06"
 
 [metadata.files]
 aiobotocore = [
@@ -1534,8 +1534,8 @@ neuro-extras = [
     {file = "neuro_extras-21.9.3-py3-none-any.whl", hash = "sha256:503170c9e763099a61c99e8e01e7e43c3dead54e37350eea7d0a1d4b558c1b2e"},
 ]
 neuro-flow = [
-    {file = "neuro-flow-21.9.tar.gz", hash = "sha256:855db42ffc55c5c456e15a1478830e3cc3ae69fa2499339778e1287f693ace28"},
-    {file = "neuro_flow-21.9-py3-none-any.whl", hash = "sha256:2d87e206367b2926409075b07f6bc6ed01c0f0a4172de123748e9104cd5f9989"},
+    {file = "neuro-flow-21.10.0.tar.gz", hash = "sha256:1338a024a75814ed218518cc37d8484a5ab4d1129bebce1715f00168fe527f68"},
+    {file = "neuro_flow-21.10.0-py3-none-any.whl", hash = "sha256:ed6f16fb355895baca9e525fd05ebee67e1f23243487b867375c1d23ca9997c1"},
 ]
 neuro-sdk = [
     {file = "neuro-sdk-21.10.0.tar.gz", hash = "sha256:bbcd01efb83f2a9c4e96e95465474bce8f346420ea8c404c20c77d9dededea0c"},
