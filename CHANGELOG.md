@@ -5,6 +5,20 @@
 
 [comment]: # (release notes start)
 
+Neuro 21.11.0 (2021-11-08)
+==========================
+
+Neuro SDK/CLI 21.11.0 (2021-11-08)
+==================================
+
+Features
+--------
+
+- Report job price in `neuro job status`, add support of organisation names in jobs. ([#2404](https://github.com/neuro-inc/platform-client-python/issues/2404))
+- Raise dedicated `NotSupportedError` for unsupported REST API calls ([#2407](https://github.com/neuro-inc/platform-client-python/issues/2407))
+
+
+
 Neuro 21.10.2 (2021-10-29)
 ==========================
 

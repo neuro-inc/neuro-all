@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "neuro-all"
-version = "21.10.2"
+version = "21.11.0"
 description = "Combo package for installing all neu.ro command line tools by 'pipx install neuro-all' command"
 authors = ["Neu.ro Team <team@neu.ro>"]
 license = "Apache-2.0"
@@ -40,7 +40,7 @@ neuro-flow = "neuro_flow.cli:main"
 
 [tool.poetry.dependencies]
 python = "^3.6.2"
-neuro-cli = "21.10.0"
+neuro-cli = "21.11.0"
 neuro-extras = "21.9.3"
 neuro-flow = "21.10.0"
 
