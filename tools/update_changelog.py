@@ -2,10 +2,47 @@
 import click
 import datetime
 import subprocess
-from all_repos.clone import main as clone_main
+import sys
 from difflib import SequenceMatcher
+from importlib.metadata import version
 from pathlib import Path
 from typing import Optional
+
+
+UPSTREAMS = {
+    "platform-client-python": "neuro-cli",
+    "neuro-extras": "neuro-extras",
+    "neuro-flow": "neuro-flow",
+}
+
+
+def update_repos() -> None:
+    for upstream, dist in UPSTREAMS.items():
+        path = Path("cloned") / upstream
+        click.secho(f"Sync {upstream}", fg="yellow")
+        if not path.exists():
+            subprocess.run(
+                ["git", "clone", f"https://github.com/neuro-inc/{upstream}.git"],
+                check=True,
+            )
+        else:
+            subprocess.run(
+                ["git", "checkout", "master", "-q"],
+                check=True,
+                cwd=str(path),
+            )
+            subprocess.run(
+                ["git", "pull"],
+                check=True,
+                cwd=str(path),
+            )
+
+        subprocess.run(
+            ["git", "config", "advice.detachedHead", "false"], check=True, cwd=str(path)
+        )
+
+        ver = version(dist)
+        subprocess.run(["git", "checkout", f"v{ver}"], check=True, cwd=str(path))
 
 
 def fetch(name: str) -> Optional[str]:
@@ -29,12 +66,9 @@ def fetch(name: str) -> Optional[str]:
         return right[j1:j2]
 
 
-UPSTREAMS = ("platform-client-python", "neuro-extras", "neuro-flow")
-
-
 @click.command()
 def main() -> None:
-    clone_main()
+    update_repos()
     changes = []
     for name in UPSTREAMS:
         ret = fetch(name)
@@ -42,9 +76,12 @@ def main() -> None:
             changes.append(ret)
 
     if not changes:
-        raise click.UsageError(
-            "CHANGELOG.md is not updated:\n" f"Nothing changed in upstreams {UPSTREAMS}"
+        click.secho(
+            "CHANGELOG.md is not updated:\n"
+            f"Nothing changed in upstreams {','.join(UPSTREAMS)}",
+            fg="red",
         )
+        sys.exit(1)
 
     changelog = Path("CHANGELOG.md")
     txt = changelog.read_text()
@@ -61,7 +98,7 @@ def main() -> None:
     header += "=" * (len(header) - 1) + "\n"
     changelog.write_text(pre + "\n\n" + header + "".join(changes) + post)
 
-    click.echo("CHANGELOG.md is updated")
+    click.echo("CHANGELOG.md is updated", fg="green")
 
 
 if __name__ == "__main__":

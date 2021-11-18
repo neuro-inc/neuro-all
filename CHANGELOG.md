@@ -5,7 +5,7 @@
 
 [comment]: # (release notes start)
 
-Neuro 21.11.0 (2021-11-18)
+Neuro 21.11.1 (2021-11-18)
 ==========================
 
 Neuro SDK/CLI 21.11.1 (2021-11-17)
@@ -65,15 +65,15 @@ Features
 
   ```
   inputs:
-    arg1:
-      descr: Input with implicit string type
-    arg2:
-      descr: Input with explicit string type
-      type: str
-     arg2:
-      descr: Input with explicit int type and corresponding default
-      type: int
-      default: 42
+	arg1:
+	  descr: Input with implicit string type
+	arg2:
+	  descr: Input with explicit string type
+	  type: str
+	 arg2:
+	  descr: Input with explicit int type and corresponding default
+	  type: int
+	  default: 42
   ```
 
   Supported types are `int`, `float`, `bool`, `str`. On action calls side, it's now possible to use

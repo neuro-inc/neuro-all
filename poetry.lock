@@ -74,17 +74,6 @@ python-versions = ">=3.6"
 frozenlist = ">=1.1.0"
 
 [[package]]
-name = "all-repos"
-version = "1.21.2"
-description = "Clone all your repositories and apply sweeping changes."
-category = "dev"
-optional = false
-python-versions = ">=3.6.1"
-
-[package.dependencies]
-identify = "*"
-
-[[package]]
 name = "arrow"
 version = "1.2.1"
 description = "Better dates & times for Python"
@@ -1123,7 +1112,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.2"
-content-hash = "9687fd11728bec7adf5d1a1a53e620ff1577b3e9a51116bc4a597af9678b5973"
+content-hash = "d891c7939c7717155aa16db91e4e0d8df3840d95ee18bf6768e83c614f51ab2a"
 
 [metadata.files]
 aiobotocore = [
@@ -1214,10 +1203,6 @@ aioitertools = [
 aiosignal = [
     {file = "aiosignal-1.2.0-py3-none-any.whl", hash = "sha256:26e62109036cd181df6e6ad646f91f0dcfd05fe16d0cb924138ff2ab75d64e3a"},
     {file = "aiosignal-1.2.0.tar.gz", hash = "sha256:78ed67db6c7b7ced4f98e495e572106d5c432a93e1ddd1bf475e1dc05f5b7df2"},
-]
-all-repos = [
-    {file = "all_repos-1.21.2-py2.py3-none-any.whl", hash = "sha256:2f8feb160e66944a2440cb4ff886830efc5e2fef44c63f1c94fc40f820264c47"},
-    {file = "all_repos-1.21.2.tar.gz", hash = "sha256:2c42f1cb18aebc2efa601d76fbbadee98a4dc6d71a73b1f29ef9155d191f966b"},
 ]
 arrow = [
     {file = "arrow-1.2.1-py3-none-any.whl", hash = "sha256:6b2914ef3997d1fd7b37a71ce9dd61a6e329d09e1c7b44f4d3099ca4a5c0933e"},
