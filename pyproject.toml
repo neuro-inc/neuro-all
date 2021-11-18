@@ -40,7 +40,7 @@ neuro-flow = "neuro_flow.cli:main"
 
 [tool.poetry.dependencies]
 python = "^3.6.2"
-neuro-cli = "21.11.0"
+neuro-cli = "21.11.1"
 neuro-extras = "21.9.3"
 neuro-flow = "21.10.0"
 
