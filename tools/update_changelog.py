@@ -98,7 +98,7 @@ def main() -> None:
     header += "=" * (len(header) - 1) + "\n"
     changelog.write_text(pre + "\n\n" + header + "".join(changes) + post)
 
-    click.echo("CHANGELOG.md is updated", fg="green")
+    click.secho("CHANGELOG.md is updated", fg="green")
 
 
 if __name__ == "__main__":

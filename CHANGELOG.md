@@ -5,6 +5,68 @@
 
 [comment]: # (release notes start)
 
+Neuro 21.11.2 (2021-11-23)
+==========================
+
+Neuro SDK/CLI 21.11.2 (2021-11-23)
+==================================
+
+Features
+--------
+
+- Configure version checker settings by plugins. ([#2405](https://github.com/neuro-inc/platform-client-python/issues/2405))
+- CLI startup time is 2 times shorter now. ([#2417](https://github.com/neuro-inc/platform-client-python/issues/2417))
+
+
+Deprecations and Removals
+-------------------------
+
+- Deprecate `neuro project init` command, use `cookiecutter gh:neuro-inc/cookiecutter-neuro-project` instead. ([#2418](https://github.com/neuro-inc/platform-client-python/issues/2418))
+
+
+Neuro_Extras 21.11.0 (2021-11-23)
+=================================
+
+
+Features
+--------
+
+
+- Allow to build and push docker images to the remote image registries.
+
+  The requirement for allowing Kaniko (the underlying tool) to push such images - it should be authenticated.
+
+  The registry authention data structure should be in the following form:
+  `{"auths": {"<registry URI>": {"auth": "<base64 encoded '<username>:<password>' string"}}}`
+  (tested with the `https://index.docker.io/v1/` - public DockerHub registry)
+
+  `neuro-extras config build-registy-auth` command might become handy in this case.
+
+  To attach the target registy AUTH data into the builder job, one might save it as the platform secret and mount into the builder job.
+  Mounting of the secret could be done either as the ENV variable with the name preffixed by `NE_REGISTRY_AUTH`, or as the secret file.
+  In the later case, the ENV variable should also be added with the mentioned above preffix and pointing to the corresponding file. ([#328](https://github.com/neuromation/neuro-extras/issues/328))
+
+
+Neuro Flow 21.11.0 (2021-11-23)
+===============================
+
+Features
+--------
+
+- Allow `bash` and `python` code blocks in local actions. ([#667](https://github.com/neuro-inc/neuro-flow/issues/667))
+- Add `-s/--suffix` option usage hint for cases when the live job launched without it. ([#679](https://github.com/neuro-inc/neuro-flow/issues/679))
+
+
+Bugfixes
+--------
+
+- Handle cached image status color in `neuro-flow inspect <bake>`. ([#657](https://github.com/neuro-inc/neuro-flow/issues/657))
+- Fixed parsing of bash and python in mixins ([#674](https://github.com/neuro-inc/neuro-flow/issues/674))
+- Fix parsing of 'bash' and 'python' usage in project config. ([#678](https://github.com/neuro-inc/neuro-flow/issues/678))
+- Fixed logging of filename as "." for github actions. ([#681](https://github.com/neuro-inc/neuro-flow/issues/681))
+
+
+
 Neuro 21.11.1 (2021-11-18)
 ==========================
 
