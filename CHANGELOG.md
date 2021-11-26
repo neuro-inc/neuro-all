@@ -5,6 +5,42 @@
 
 [comment]: # (release notes start)
 
+Neuro 21.11.3 (2021-11-26)
+==========================
+
+Neuro SDK/CLI 21.11.4 (2021-11-25)
+==================================
+
+Bugfixes
+--------
+
+- Fix `neuro rm storage:...` command
+
+Neuro SDK/CLI 21.11.3 (2021-11-25)
+==================================
+
+Features
+--------
+
+- Add Python 3.10 support. ([#2421](https://github.com/neuro-inc/platform-client-python/issues/2421))
+
+
+Deprecations and Removals
+-------------------------
+
+- Drop Python 3.6 support. ([#2421](https://github.com/neuro-inc/platform-client-python/issues/2421))
+
+
+Neuro Flow 21.11.2 (2021-11-26)
+===============================
+
+Features
+--------
+
+- Technical release, compatible with the latest SDK/CLI.
+
+
+
 Neuro 21.11.2 (2021-11-23)
 ==========================
 
