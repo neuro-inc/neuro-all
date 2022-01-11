@@ -68,6 +68,12 @@ def fetch(name: str) -> Optional[str]:
 
 @click.command()
 def main() -> None:
+    print("Install neuro-all")
+    subprocess.run(
+        ["poetry", "install"],
+        check=True,
+    )
+
     update_repos()
     changes = []
     for name in UPSTREAMS:
