@@ -32,6 +32,9 @@ packages = [
     { include = "neuro_all" },
 ]
 
+[tool.poetry.plugins."neuro_api"]
+neuro-all = "neuro_all:setup"
+
 [tool.poetry.scripts]
 neuro = "neuro_cli.main:main"
 docker-credential-neuro = "neuro_cli.docker_credential_helper:main"
