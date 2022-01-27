@@ -87,7 +87,7 @@ jobs:
       run: |
         poetry build
     - name: GitHub Release
-      uses: aio-libs/create-release@v1.4.0
+      uses: aio-libs/create-release@v1.5.0
       with:
         changes_file: CHANGELOG.md
         name: Neuro
