@@ -5,6 +5,120 @@
 
 [comment]: # (release notes start)
 
+Neuro 22.1.1 (2022-01-28)
+=========================
+
+Neuro SDK/CLI 22.1.3 (2022-01-27)
+=================================
+
+Features
+--------
+
+- Support organization storage size parameter. ([#2560](https://github.com/neuro-inc/platform-client-python/issues/2560))
+
+
+Neuro SDK/CLI 22.1.2 (2022-01-25)
+=================================
+
+Features
+--------
+
+- Added client-side validation of docker image name and tag. ([#2525](https://github.com/neuro-inc/platform-client-python/issues/2525))
+- Added support of column type `org_name` to ps-format. ([#2533](https://github.com/neuro-inc/platform-client-python/issues/2533))
+- Added "ORG" column to get-cluster-users output. ([#2541](https://github.com/neuro-inc/platform-client-python/issues/2541))
+- Added info about org quota to `neuro config show`. ([#2545](https://github.com/neuro-inc/platform-client-python/issues/2545))
+
+
+Bugfixes
+--------
+
+- Cluster/org name validness now checked after config re-fetch in `neuro config switch-cluster`
+  and `neuro config switch-org` commands. ([#2543](https://github.com/neuro-inc/platform-client-python/issues/2543))
+
+
+Neuro SDK/CLI 22.1.1 (2022-01-18)
+=================================
+
+Features
+--------
+
+- Add command `neuro acl list-roles` to list roles created by user. ([#2496](https://github.com/neuro-inc/platform-client-python/issues/2496))
+- Added support to set/update cluster level default credits and quota.
+
+  Use options `--default-credits` and `--default-jobs` of commands `neuro admin add-cluster`,
+  `neuro admin update-cluster`, `neuro admin add-org-cluster` and `neuro admin update-org-cluster`
+  to set and update cluster defaults. This values will when new user with role "user" is added to cluster
+  (either by `neuro admin add-cluster-user` or if user registers himself using web interface).
+  The default for managers and admins is unlimited quota and credits as the can edit their quota.
+
+  You can override default value by using `--credits` and `--jobs` options of
+  `neuro admin add-org-cluster` command. ([#2520](https://github.com/neuro-inc/platform-client-python/issues/2520))
+
+
+Bugfixes
+--------
+
+- Fixed memory leak in `neuro blob cp`. ([#2523](https://github.com/neuro-inc/platform-client-python/issues/2523))
+
+
+Neuro Flow 22.1.0 (2022-01-26)
+==============================
+
+Features
+--------
+
+- Support `${{ matrix.ORDINAL }}` as unique 0-based index for selected rows.
+
+  If a batch flow has a matrix, all matrix rows are enumerated.
+  The ordinal number of each row is available as `${{ matrix.ORDINAL }}` system value. ([#693](https://github.com/neuro-inc/neuro-flow/issues/693))
+- Add support of expressions in matrix definition.
+
+  You can now use expression to define list of matrix products. In examples here and below,
+  both `old_way_key` and `new_way_key` produce same list of values:
+
+  ```
+  matrix:
+	old_way_key: ["1", "2", "3"]
+	new_way_key: ${{ ["1", "2", "3"] }}
+  ```
+
+  This can be helpful when used together with new `range()` function:
+
+  ```
+  matrix:
+	old_way_key: [0, 1, 2, 3]
+	new_way_key: ${{ range(4) }}
+  ```
+
+  The `range()` function supports same parameters as python's `range()`, but it returns list.
+  For example: `${{ range(1, 4) }}` generates `[1,2,3]`, and `${{ range(4, 1, -1) }}` generates
+  `[4,3,2]`.
+
+  As sometimes plain numbers is not best options for matrix products, you can use list comprehension
+  to perform some mapping:
+
+  ```
+  matrix:
+	old_way_key: ["k1", "k2", "k3"]
+	new_way_key: ${{ [fmt("k{}", str(it)) for it in range(1, 4)] }}
+  ```
+
+  You can also filter some values in comprehension same way as in python:
+
+  ```
+  matrix:
+	old_way_key: [0, 4, 16]
+	new_way_key: ${{ [it * it for it in range(1, 5) if it % 2 == 0] }}
+  ``` ([#741](https://github.com/neuro-inc/neuro-flow/issues/741))
+
+
+Bugfixes
+--------
+
+- Fixed (disabled) uploads to storage in dry-run mode ([#732](https://github.com/neuro-inc/neuro-flow/issues/732))
+
+
+
 Neuro 22.1.0 (2022-01-11)
 =========================
 
