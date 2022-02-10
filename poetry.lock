@@ -499,7 +499,7 @@ wcwidth = ">=0.1.7"
 
 [[package]]
 name = "neuro-extras"
-version = "21.11.5"
+version = "22.2.1.post3"
 description = ""
 category = "main"
 optional = false
@@ -939,7 +939,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7.0"
-content-hash = "3daa0cacd4a40f995e811307d35ceb04c7683a9529e470933facc755b8196cdf"
+content-hash = "f7228d22e24a96f2ba0a6749c9160bf7a6f9c16a7e974188a5101ebf51c3563f"
 
 [metadata.files]
 aiobotocore = [
@@ -1383,8 +1383,8 @@ neuro-cli = [
     {file = "neuro_cli-22.1.3-py3-none-any.whl", hash = "sha256:c54c0d341df49fc129c7daa7d6e2e3c79d467c7f9f66955fa7ec5bc92c0e3415"},
 ]
 neuro-extras = [
-    {file = "neuro-extras-21.11.5.tar.gz", hash = "sha256:dcda15bf18effe5306082cede040088346269a3f4c70cdef2adb74f475653840"},
-    {file = "neuro_extras-21.11.5-py3-none-any.whl", hash = "sha256:2d5f07551e2945aa68172d616ddf04062417781fa8c0f6d0e93eb5d831cadc5d"},
+    {file = "neuro-extras-22.2.1.post3.tar.gz", hash = "sha256:7110f51c92a40e2097421569448bc240fc93497b4956a0e31857515aef36a3dd"},
+    {file = "neuro_extras-22.2.1.post3-py3-none-any.whl", hash = "sha256:563eb8a4e03d58ace58762af4f314194b973ae28fdd84f6347ad38f238b029f2"},
 ]
 neuro-flow = [
     {file = "neuro-flow-22.1.0.tar.gz", hash = "sha256:6eecb156a46e9c6acb3cb4a5c276ad84222ec8e10cf7fd11d2a96b2b827537fe"},
