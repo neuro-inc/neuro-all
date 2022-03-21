@@ -31,12 +31,12 @@ jobs:
       with:
         python-version: 3.9
     - name: Cache pre-commit hooks
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ~/.cache/pre-commit
         key: pre-commit|py3.9|${{ hashFiles('.pre-commit-config.yaml') }}
     - name: Cache PyPI
-      uses: actions/cache@v2.1.5
+      uses: actions/cache@v3
       with:
         key: lint-${{ hashFiles('pyproject.toml', 'poetry.lock') }}
         path: ~/.cache/pip
