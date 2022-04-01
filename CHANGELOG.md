@@ -5,7 +5,7 @@
 
 [comment]: # (release notes start)
 
-Neuro 22.1.1 (2022-04-01)
+Neuro 22.4.0 (2022-04-01)
 =========================
 
 neuro-extras v22.2.2 (2022-02-17)
