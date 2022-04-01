@@ -5,6 +5,57 @@
 
 [comment]: # (release notes start)
 
+Neuro 22.1.1 (2022-04-01)
+=========================
+
+neuro-extras v22.2.2 (2022-02-17)
+=================================
+
+
+Bugfixes
+--------
+
+
+- Fix relative dockerfile path for Kaniko on Windows ([#463](https://github.com/neuromation/neuro-extras/issues/463))
+
+
+neuro-extras v22.2.1 (2022-02-10)
+=================================
+
+
+Features
+--------
+
+
+- Added Python 3.10 support. ([#417](https://github.com/neuromation/neuro-extras/issues/417))
+
+- Add `local-build` subcommand to `neuro-extras image` that allows building images via local Docker daemon. ([#448](https://github.com/neuromation/neuro-extras/issues/448))
+
+- Help user to select the resource preset for image build ([#450](https://github.com/neuromation/neuro-extras/issues/450))
+
+
+Deprecations and Removals
+-------------------------
+
+
+- Removed Python 3.6 support. ([#417](https://github.com/neuromation/neuro-extras/issues/417))
+
+
+Neuro Flow 22.4.2 (2022-04-01)
+==============================
+
+No significant changes.
+
+
+Neuro Flow 22.3.0 (2022-03-29)
+==============================
+
+Bugfixes
+--------
+
+- Fixed problem with click 8.1.0
+
+
 Neuro 22.1.1 (2022-01-28)
 =========================
 

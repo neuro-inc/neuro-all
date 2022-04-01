@@ -10,7 +10,7 @@ from typing import Optional
 
 
 UPSTREAMS = {
-    "platform-client-python": "neuro-cli",
+    "neuro-cli": "neuro-cli",
     "neuro-extras": "neuro-extras",
     "neuro-flow": "neuro-flow",
 }
@@ -24,6 +24,7 @@ def update_repos() -> None:
             subprocess.run(
                 ["git", "clone", f"https://github.com/neuro-inc/{upstream}.git"],
                 check=True,
+                cwd=Path("cloned"),
             )
         else:
             subprocess.run(
