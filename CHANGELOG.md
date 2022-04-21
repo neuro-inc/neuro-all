@@ -5,6 +5,19 @@
 
 [comment]: # (release notes start)
 
+Neuro 22.4.1 (2022-04-21)
+=========================
+
+Neuro Flow 22.4.3 (2022-04-21)
+==============================
+
+Bugfixes
+--------
+
+- Fixed error when trying to build image in batch mode ([#818](https://github.com/neuro-inc/neuro-flow/issues/818))
+
+
+
 Neuro 22.4.0 (2022-04-01)
 =========================
 
