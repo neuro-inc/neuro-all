@@ -455,7 +455,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "neuro-admin-client"
-version = "22.5.1"
+version = "22.6.4"
 description = "Internal client for Neu.ro admin service"
 category = "main"
 optional = false
@@ -466,7 +466,7 @@ aiohttp = ">=3.8.1"
 
 [[package]]
 name = "neuro-cli"
-version = "22.6.2"
+version = "22.6.3"
 description = "Neuro Platform client"
 category = "main"
 optional = false
@@ -477,7 +477,7 @@ certifi = "*"
 click = ">=8.0"
 humanize = ">=3.3"
 jedi = ">=0.16"
-neuro-sdk = ">=22.6.2"
+neuro-sdk = ">=22.6.3"
 prompt-toolkit = ">=3.0.13"
 python-dateutil = ">=2.7.0"
 python-jose = ">=3.0.0"
@@ -522,7 +522,7 @@ yarl = ">=1.7,<1.8"
 
 [[package]]
 name = "neuro-sdk"
-version = "22.6.2"
+version = "22.6.3"
 description = "Neu.ro SDK"
 category = "main"
 optional = false
@@ -536,7 +536,7 @@ azure-storage-blob = ">=12.8.1,<12.9.0 || >12.9.0"
 certifi = "*"
 google-auth = ">=2.0.2"
 importlib-metadata = {version = ">=4.7.1", markers = "python_version < \"3.10\""}
-neuro-admin-client = "22.5.1"
+neuro-admin-client = ">=22.6.4"
 packaging = ">=20.4"
 python-dateutil = ">=2.7.0"
 python-jose = ">=3.3.0"
@@ -925,7 +925,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7.0"
-content-hash = "27dffa7efcb3cdde79893895e2715627dcc626a503c28efbee645649dd8166c5"
+content-hash = "8c43b72093c51a50795eb41c438db953895bf3ca4a3fbd76a2d590fd70ee8e62"
 
 [metadata.files]
 aiobotocore = [
@@ -1345,12 +1345,12 @@ multidict = [
     {file = "multidict-5.2.0.tar.gz", hash = "sha256:0dd1c93edb444b33ba2274b66f63def8a327d607c6c790772f448a53b6ea59ce"},
 ]
 neuro-admin-client = [
-    {file = "neuro-admin-client-22.5.1.tar.gz", hash = "sha256:f7c7b2c9b13d5961e8751b7ba1887343fc0fe64b02ff4027cd5584112d60024f"},
-    {file = "neuro_admin_client-22.5.1-py3-none-any.whl", hash = "sha256:6bac4348c20dc9e7e60f72922625c1d891c87157a89f49ce232bc850d583bfa1"},
+    {file = "neuro-admin-client-22.6.4.tar.gz", hash = "sha256:7fc33debe202695995a5156655a73659b0aa0c5879f4497cc760f804c20eef14"},
+    {file = "neuro_admin_client-22.6.4-py3-none-any.whl", hash = "sha256:0cdf1eb65a28012b15bd4e77c1f9594037742f82f5d86e1948531575034e0642"},
 ]
 neuro-cli = [
-    {file = "neuro-cli-22.6.2.tar.gz", hash = "sha256:3b80a525f679faf1e6165175bef894bcc01a2f5655240fc7ba66abb5eb9613b2"},
-    {file = "neuro_cli-22.6.2-py3-none-any.whl", hash = "sha256:00fbd8f197a7871c4a46525028ec5206ed2f949a34c47bf39276a2d4f4504b44"},
+    {file = "neuro-cli-22.6.3.tar.gz", hash = "sha256:6ce9645f7c010275c7e88ec91662c8ce6749d5090f41525af117773bcea0bf37"},
+    {file = "neuro_cli-22.6.3-py3-none-any.whl", hash = "sha256:e5e062c668b1f271a28f5d8ea4897c5323f3ea6e9966e24d389da18cade69187"},
 ]
 neuro-extras = [
     {file = "neuro-extras-22.2.2.tar.gz", hash = "sha256:33bbee6f3804d807a843d745ce5c8657da3e710e2ab6a811417ad3d0375b4c8c"},
@@ -1361,8 +1361,8 @@ neuro-flow = [
     {file = "neuro_flow-22.6.0-py3-none-any.whl", hash = "sha256:b441a697aa4e3e0f50d6e1b74926fce45f5cb922a1a73ea76f67578c4202705b"},
 ]
 neuro-sdk = [
-    {file = "neuro-sdk-22.6.2.tar.gz", hash = "sha256:315c91cac264c2a27662783275a008a402b22a354255c336aab1e97d5177d294"},
-    {file = "neuro_sdk-22.6.2-py3-none-any.whl", hash = "sha256:d5500832898c548e70b50dd08ec5884f99dfbb1068aa323ef83173cc5fc2d618"},
+    {file = "neuro-sdk-22.6.3.tar.gz", hash = "sha256:8057815b1510e8458e215048eceb959b8aa4aabdedecadabe21f0a6657e9f1c2"},
+    {file = "neuro_sdk-22.6.3-py3-none-any.whl", hash = "sha256:9d994d70e4c51b4a4024b15f9bc479dab60d5fbe79ae8e9cfbbe19421778ed1b"},
 ]
 nodeenv = [
     {file = "nodeenv-1.6.0-py2.py3-none-any.whl", hash = "sha256:621e6b7076565ddcacd2db0294c0381e01fd28945ab36bcf00f41c5daf63bef7"},
