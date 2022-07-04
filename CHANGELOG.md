@@ -5,6 +5,59 @@
 
 [comment]: # (release notes start)
 
+Neuro 22.7.0 (2022-07-04)
+=========================
+
+Neuro SDK/CLI 22.7.0 (2022-07-04)
+=================================
+
+Features
+--------
+
+- Update size formatting: use decimal prefixes ([#2768](https://github.com/neuro-inc/platform-client-python/issues/2768))
+
+
+Bugfixes
+--------
+
+- Fix formatting URIs in short form for users with organization. ([#2749](https://github.com/neuro-inc/platform-client-python/issues/2749))
+- Disks, buckets and secrets are now created with the current organization instead of no organization if `--org` is not explicitly specified. ([#2756](https://github.com/neuro-inc/platform-client-python/issues/2756))
+
+
+Misc
+----
+
+- [#2752](https://github.com/neuro-inc/platform-client-python/issues/2752)
+
+
+Neuro SDK/CLI 22.6.3 (2022-06-30)
+=================================
+
+Bugfixes
+--------
+
+- Pin `neuro-admin-client` to `>=22.6.4`, make SDK future-compatible with next `neuro-admin-client` releases. ([#2757](https://github.com/neuro-inc/platform-client-python/issues/2757))
+
+
+Neuro SDK/CLI 22.6.2 (2022-06-15)
+=================================
+
+Features
+--------
+
+- Allow user without clusters call neuro-sdk Jobs.status method if they have permissions. ([#2733](https://github.com/neuro-inc/platform-client-python/issues/2733))
+
+
+Neuro SDK/CLI 22.6.1 (2022-06-09)
+=================================
+
+Features
+--------
+
+- Re-load clusters config in `neuro config show`. ([#2728](https://github.com/neuro-inc/platform-client-python/issues/2728))
+
+
+
 Neuro 22.6.0 (2022-06-08)
 =========================
 
