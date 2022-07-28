@@ -5,6 +5,55 @@
 
 [comment]: # (release notes start)
 
+Neuro 22.7.1 (2022-07-28)
+=========================
+
+Neuro SDK/CLI 22.7.1 (2022-07-27)
+=================================
+
+Features
+--------
+
+- Add update-node-pool command. Only idle_size update is available. ([#2740](https://github.com/neuro-inc/platform-client-python/issues/2740))
+- Integrate neuro-config-client package. ([#2791](https://github.com/neuro-inc/platform-client-python/issues/2791))
+- Added project management commands to `neuro admin`. ([#2798](https://github.com/neuro-inc/platform-client-python/issues/2798))
+
+
+Bugfixes
+--------
+
+- Fix `neuro admin update-resource-preset`: previous values are now used for boolean parameters if options `--scheduler/--no-scheduler` or `--preemptible-node/--no-preemptible-node` are not explicitly specified. ([#2761](https://github.com/neuro-inc/platform-client-python/issues/2761))
+
+
+Neuro Flow 22.7.2 (2022-07-28)
+==============================
+
+Features
+--------
+
+- Implement `flow.action_path` property in the flow context.  It is available from action and points to the folder where `action.yml` file is located. ([#896](https://github.com/neuro-inc/neuro-flow/issues/896))
+- Replace HTTP fetch with git clone for remote actions. ([#897](https://github.com/neuro-inc/neuro-flow/issues/897))
+
+
+Neuro Flow 22.7.1 (2022-07-25)
+==============================
+
+Bugfixes
+--------
+
+- Use a separate src folder to don install tests when installing neuro-flow. ([#891](https://github.com/neuro-inc/neuro-flow/issues/891))
+
+
+Neuro Flow 22.7.0 (2022-07-25)
+==============================
+
+Features
+--------
+
+- Implement `neuro-flow init` command for easy flow creation ([#859](https://github.com/neuro-inc/neuro-flow/issues/859))
+
+
+
 Neuro 22.7.0 (2022-07-04)
 =========================
 

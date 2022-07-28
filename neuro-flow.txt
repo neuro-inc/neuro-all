@@ -1,4 +1,32 @@
 
+Neuro Flow 22.7.2 (2022-07-28)
+==============================
+
+Features
+--------
+
+- Implement `flow.action_path` property in the flow context.  It is available from action and points to the folder where `action.yml` file is located. ([#896](https://github.com/neuro-inc/neuro-flow/issues/896))
+- Replace HTTP fetch with git clone for remote actions. ([#897](https://github.com/neuro-inc/neuro-flow/issues/897))
+
+
+Neuro Flow 22.7.1 (2022-07-25)
+==============================
+
+Bugfixes
+--------
+
+- Use a separate src folder to don install tests when installing neuro-flow. ([#891](https://github.com/neuro-inc/neuro-flow/issues/891))
+
+
+Neuro Flow 22.7.0 (2022-07-25)
+==============================
+
+Features
+--------
+
+- Implement `neuro-flow init` command for easy flow creation ([#859](https://github.com/neuro-inc/neuro-flow/issues/859))
+
+
 Neuro Flow 22.6.0 (2022-06-07)
 ==============================
 
