@@ -5,6 +5,19 @@
 
 [comment]: # (release notes start)
 
+Neuro 22.7.1 (2022-08-04)
+=========================
+
+Neuro Flow 22.8.0 (2022-08-04)
+==============================
+
+Features
+--------
+
+- Added support of `flow.action_path` for images sections of action. ([#902](https://github.com/neuro-inc/neuro-flow/issues/902))
+
+
+
 Neuro 22.7.1 (2022-07-28)
 =========================
 
