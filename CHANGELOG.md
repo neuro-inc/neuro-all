@@ -5,7 +5,7 @@
 
 [comment]: # (release notes start)
 
-Neuro 22.7.1 (2022-08-04)
+Neuro 22.8.0 (2022-08-04)
 =========================
 
 Neuro Flow 22.8.0 (2022-08-04)
