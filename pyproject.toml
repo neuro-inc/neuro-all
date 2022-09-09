@@ -46,7 +46,7 @@ python = "^3.7.0"
 neuro-cli = "22.7.1"
 neuro-extras = "22.2.2"
 neuro-flow = "22.8.1"
-certifi = "2022.6.15"
+certifi = "2022.6.15.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "7.1.3"
