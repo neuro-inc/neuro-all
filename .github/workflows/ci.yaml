@@ -54,7 +54,7 @@ jobs:
     - name: Save the package version
       id: version
       run: |
-        echo "::set-output name=version::$(poetry version --short)"
+        echo "version=$(poetry version --short)" >> $GITHUB_OUTPUT
     - name: Show version
       run: |
         echo ${{ steps.version.outputs.version }}
