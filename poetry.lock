@@ -914,13 +914,13 @@ tzdata = "*"
 
 [[package]]
 name = "neuro-extras"
-version = "23.7.0"
+version = "23.7.1"
 description = ""
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "neuro-extras-23.7.0.tar.gz", hash = "sha256:8d59a9d56716ab4bf49cf5dec2a047805db7e1aeaf811a611ee0cadbcbb2b81b"},
-    {file = "neuro_extras-23.7.0-py3-none-any.whl", hash = "sha256:dfcbf7a9cf45c177cf8ad632575139b989d10051d7980be1090d9353aefcbc31"},
+    {file = "neuro-extras-23.7.1.tar.gz", hash = "sha256:260fa1a6cba3062d9e70b1e452b96cc3602ea2df42b7d7fa489dd5b0a1760204"},
+    {file = "neuro_extras-23.7.1-py3-none-any.whl", hash = "sha256:4d87c0f08c83a29f831d518a71da38a48f3ea79c1e5842195238f853be4b99dd"},
 ]
 
 [package.dependencies]
@@ -1637,4 +1637,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.0"
-content-hash = "9ed426c083f8d7679df7ecd2018c3c51f09340addcbcc70dbf5e24e0f51c5748"
+content-hash = "d0b164c3e280377d31d8c99a31578cd34a1c15c99bd07127b77e996e25e12586"
