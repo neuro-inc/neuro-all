@@ -5,7 +5,7 @@
 
 [comment]: # (release notes start)
 
-Neuro 23.7.0 (2023-07-13)
+Neuro 23.7.1 (2023-07-13)
 =========================
 
 neuro-extras v23.7.1 (2023-07-13)
