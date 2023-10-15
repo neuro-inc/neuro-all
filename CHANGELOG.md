@@ -5,6 +5,17 @@
 
 [comment]: # (release notes start)
 
+Neuro 23.10.0 (2023-10-16)
+==========================
+
+# Neuro Flow 23.10.1 (2023-10-15)
+
+### Features
+
+- Expose jobs and tasks restart policy configuration ([#1072](https://github.com/neuro-inc/neuro-flow/issues/1072))
+
+
+
 Neuro 23.7.1 (2023-07-13)
 =========================
 
