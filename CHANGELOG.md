@@ -5,6 +5,23 @@
 
 [comment]: # (release notes start)
 
+Neuro 23.10.0 (2023-10-18)
+==========================
+
+# Neuro Flow 23.10.2 (2023-10-18)
+
+### Bugfixes
+
+- Fix read retries from neuro APIs. Fix configuration of executor lifespan in bake config file, example:
+  ```
+  kind: batch
+  life_span: 30d
+  tasks:
+    ...
+  ``` ([#1075](https://github.com/neuro-inc/neuro-flow/issues/1075))
+
+
+
 Neuro 23.10.0 (2023-10-16)
 ==========================
 
