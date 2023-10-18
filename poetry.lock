@@ -931,13 +931,13 @@ toml = ">=0.10.0"
 
 [[package]]
 name = "neuro-flow"
-version = "23.10.1"
+version = "23.10.2"
 description = "Pipelines system for neu.ro"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "neuro-flow-23.10.1.tar.gz", hash = "sha256:6f1d4f7f1231bc5666ce99fd44884c89d9143dc1413f36e17e069c36126d19ef"},
-    {file = "neuro_flow-23.10.1-py3-none-any.whl", hash = "sha256:93165358edcdd756603895e508cdf889acfa0f81043d19889d74baa954b57d2a"},
+    {file = "neuro-flow-23.10.2.tar.gz", hash = "sha256:a81ad1dd63c5cf60cd738afaa1544288d9c82a09f9e388c4b99e83f1c28fe016"},
+    {file = "neuro_flow-23.10.2-py3-none-any.whl", hash = "sha256:49e7e667547dafb7184c862e00b3141c73a0b88bc5df0e8bedee6d50407c29f5"},
 ]
 
 [package.dependencies]
@@ -1647,4 +1647,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.0"
-content-hash = "c5a00aa9001827d0d02f9257bd43fa1bce8bdc00bb0ffaff6fabbbc865607da2"
+content-hash = "c3440abcba2ec0cc7deb6611f7b8d474ce33ab1ccca546bfa411d6d0534baadb"
