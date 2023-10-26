@@ -874,13 +874,13 @@ aiohttp = ">=3.8.1"
 
 [[package]]
 name = "neuro-cli"
-version = "23.7.0"
+version = "23.10.0"
 description = "Neuro Platform client"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "neuro-cli-23.7.0.tar.gz", hash = "sha256:60b1692e05bbd67d2286cc046a34a2c0a40db8c4c86533d1644203547fca4dbf"},
-    {file = "neuro_cli-23.7.0-py3-none-any.whl", hash = "sha256:b7c8aa703a3fafd9f61f167e3a13424288373c6fda4d2964af9897edacc78cee"},
+    {file = "neuro-cli-23.10.0.tar.gz", hash = "sha256:783bf93bd8687929b2407f9fda582c2f0fa1744315b1541639bad9345df2ac61"},
+    {file = "neuro_cli-23.10.0-py3-none-any.whl", hash = "sha256:ab2b29f6e92a20f017f076a64b114376982618ed43a526c72b35da25d32fb6b9"},
 ]
 
 [package.dependencies]
@@ -888,7 +888,7 @@ certifi = "*"
 click = ">=8.0"
 humanize = ">=3.3"
 jedi = ">=0.16"
-neuro-sdk = ">=23.7.0"
+neuro-sdk = ">=23.10.0"
 prompt-toolkit = ">=3.0.13"
 python-dateutil = ">=2.7.0"
 python-jose = ">=3.0.0"
@@ -955,13 +955,13 @@ yarl = ">=1.7"
 
 [[package]]
 name = "neuro-sdk"
-version = "23.7.0"
+version = "23.10.0"
 description = "Neu.ro SDK"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "neuro-sdk-23.7.0.tar.gz", hash = "sha256:de2d6613065f087a87ed460dba23e28e9ee4e150033cf668487a7b78b5dda0b9"},
-    {file = "neuro_sdk-23.7.0-py3-none-any.whl", hash = "sha256:86b4b990551efc1e5951984a1f4087cc9a56a18817dea5f828a474aafcc51ca1"},
+    {file = "neuro-sdk-23.10.0.tar.gz", hash = "sha256:2693cfc26146486c575174bc7184a9db0a49fb089f269d2a39806af80fe36749"},
+    {file = "neuro_sdk-23.10.0-py3-none-any.whl", hash = "sha256:68d6467bc1c4a81a22af846d86aa0d93dc4e48ada446ee4fc829e75621445b9f"},
 ]
 
 [package.dependencies]
@@ -1647,4 +1647,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.0"
-content-hash = "ce9409cc98c484878350f4257d916baf9bcbe55c366502663c6b6a4718f14c7e"
+content-hash = "06d93b9787d3b7da8a513e3cde1bd51dd253a9f2a5f8e57cd79ec5a17dab19d9"
