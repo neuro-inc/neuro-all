@@ -874,13 +874,13 @@ aiohttp = ">=3.8.1"
 
 [[package]]
 name = "neuro-cli"
-version = "23.10.0"
+version = "23.11.0"
 description = "Neuro Platform client"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "neuro-cli-23.10.0.tar.gz", hash = "sha256:783bf93bd8687929b2407f9fda582c2f0fa1744315b1541639bad9345df2ac61"},
-    {file = "neuro_cli-23.10.0-py3-none-any.whl", hash = "sha256:ab2b29f6e92a20f017f076a64b114376982618ed43a526c72b35da25d32fb6b9"},
+    {file = "neuro-cli-23.11.0.tar.gz", hash = "sha256:6a16f2a0739a31de5dfa313b036a729e850a56e66d7acd30b3e6e5bf681b95a7"},
+    {file = "neuro_cli-23.11.0-py3-none-any.whl", hash = "sha256:96d50a8a69ddd6ec201d23b72ced8171bb7eaf568ffe13e772cf447ae240dfca"},
 ]
 
 [package.dependencies]
@@ -888,7 +888,7 @@ certifi = "*"
 click = ">=8.0"
 humanize = ">=3.3"
 jedi = ">=0.16"
-neuro-sdk = ">=23.10.0"
+neuro-sdk = ">=23.11.0"
 prompt-toolkit = ">=3.0.13"
 python-dateutil = ">=2.7.0"
 python-jose = ">=3.0.0"
@@ -955,13 +955,13 @@ yarl = ">=1.7"
 
 [[package]]
 name = "neuro-sdk"
-version = "23.10.0"
+version = "23.11.0"
 description = "Neu.ro SDK"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "neuro-sdk-23.10.0.tar.gz", hash = "sha256:2693cfc26146486c575174bc7184a9db0a49fb089f269d2a39806af80fe36749"},
-    {file = "neuro_sdk-23.10.0-py3-none-any.whl", hash = "sha256:68d6467bc1c4a81a22af846d86aa0d93dc4e48ada446ee4fc829e75621445b9f"},
+    {file = "neuro-sdk-23.11.0.tar.gz", hash = "sha256:e949fcee5616a2586a805b439fa86a52bf68935fa35597698342978a5d76af92"},
+    {file = "neuro_sdk-23.11.0-py3-none-any.whl", hash = "sha256:f7192add26877eacd9023ea51a953792be6f257290a3eb5e79bfebf36b34b68b"},
 ]
 
 [package.dependencies]
@@ -1647,4 +1647,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.0"
-content-hash = "f85348c1d46ab80ad9bcdf03b187b9a8e96934d63bba8caed6ac7a17427a1f62"
+content-hash = "0f73a6b8e2e91ac1ffe599a3d040878fb0c87db04f3f98a901f219cc4905e1d4"
