@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "neuro-all"
-version = "23.10.1"
+version = "23.11.0"
 description = "Combo package for installing all neu.ro command line tools by 'pipx install neuro-all' command"
 authors = ["Neu.ro Team <team@neu.ro>"]
 license = "Apache-2.0"

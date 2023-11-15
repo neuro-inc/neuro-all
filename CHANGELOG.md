@@ -5,6 +5,44 @@
 
 [comment]: # (release notes start)
 
+Neuro 23.11.0 (2023-11-15)
+==========================
+
+Neuro SDK/CLI 23.11.0 (2023-11-14)
+==================================
+
+No significant changes.
+
+
+Neuro SDK/CLI 23.10.0 (2023-10-26)
+==================================
+
+No significant changes.
+
+
+neuro-extras v23.11.0 (2023-11-01)
+==================================
+
+
+Features
+--------
+
+
+- Use `-p/--project` while building image to set the project for entire build process. ([#600](https://github.com/neuromation/neuro-extras/issues/600))
+
+
+# Neuro Flow 23.11.0 (2023-11-15)
+
+### Features
+
+- `${{ project.project_name }}` now also configures `volume`'s remote path and `image` reference if the project name was not set.
+
+  If you do not have `project_name` set in `project.yaml`, the volume paths are assumed within your current project configured in CLI.
+  However, if you set `project_name`, this project will be assumed while managing jobs, bakes, volumes, building images etc. within this flow. ([#1081](https://github.com/neuro-inc/neuro-flow/issues/1081))
+- Add retries for read-only operations on Server Unavailable error. ([#1085](https://github.com/neuro-inc/neuro-flow/issues/1085))
+
+
+
 Neuro 23.10.1 (2023-10-18)
 ==========================
 
