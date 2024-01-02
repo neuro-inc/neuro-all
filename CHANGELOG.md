@@ -5,6 +5,19 @@
 
 [comment]: # (release notes start)
 
+Neuro 24.1.0 (2024-01-02)
+=========================
+
+Neuro SDK/CLI 24.1.0 (2024-01-02)
+=================================
+
+Bugfixes
+--------
+
+- Do not perform terminal settings reset in PyCharm while it causes screen cleanup. ([#3005](https://github.com/neuro-inc/neuro-cli/issues/3005))
+
+
+
 Neuro 23.11.0 (2023-11-15)
 ==========================
 
