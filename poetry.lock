@@ -874,21 +874,22 @@ aiohttp = ">=3.8.1"
 
 [[package]]
 name = "neuro-cli"
-version = "24.1.0"
+version = "24.2.0"
 description = "Neuro Platform client"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "neuro-cli-24.1.0.tar.gz", hash = "sha256:e0037d8b4df2f1d0852f2528a0a227cf6989adc5a5b697a2d2cbf47bfaae6ab7"},
-    {file = "neuro_cli-24.1.0-py3-none-any.whl", hash = "sha256:7290b892341492cf7e78fca745e38fdda618ad2cdfe0467aae2990db709d1ad1"},
+    {file = "neuro-cli-24.2.0.tar.gz", hash = "sha256:f5af5f26d2ccf45c633be1d6e16ccf608c7202712474da34e7c34363c30ad5ab"},
+    {file = "neuro_cli-24.2.0-py3-none-any.whl", hash = "sha256:c21753d1fd4d7f08f0d3d6c507dd4c78dd889875d73abfb12138c2b411cc6486"},
 ]
 
 [package.dependencies]
+async-timeout = {version = ">=4.0.0", markers = "python_version < \"3.11\""}
 certifi = "*"
 click = ">=8.0"
 humanize = ">=3.3"
 jedi = ">=0.16"
-neuro-sdk = ">=24.1.0"
+neuro-sdk = ">=24.2.0"
 prompt-toolkit = ">=3.0.13"
 python-dateutil = ">=2.7.0"
 python-jose = ">=3.0.0"
@@ -955,13 +956,13 @@ yarl = ">=1.7"
 
 [[package]]
 name = "neuro-sdk"
-version = "24.1.0"
+version = "24.2.0"
 description = "Neu.ro SDK"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "neuro-sdk-24.1.0.tar.gz", hash = "sha256:4a05adb03ae205e91222fff7d62af9b5012f5ba0ec121061effb17e6d4da7eb8"},
-    {file = "neuro_sdk-24.1.0-py3-none-any.whl", hash = "sha256:eb4c5cba9693214fc424e5240b713cdf29a6e49f066474396739f15765a31609"},
+    {file = "neuro-sdk-24.2.0.tar.gz", hash = "sha256:0a4227dfbb20cb862173c1287f974958e87a24d7922cf0af4a92f7b2ddf8bc92"},
+    {file = "neuro_sdk-24.2.0-py3-none-any.whl", hash = "sha256:ebbea820e34d60e865721ec8b927eccbcb8ca305d717aba1e13966a7fbdd5c5a"},
 ]
 
 [package.dependencies]
@@ -1647,4 +1648,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.0"
-content-hash = "0905c4463442fb4bac13cbad583314f98adf11d63f787db1cd7ee90fc5f65dee"
+content-hash = "7decf446bf1af4729702a4a2071b1444b9b938976ad6b1b50d018230e7f59949"
