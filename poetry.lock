@@ -932,13 +932,13 @@ toml = ">=0.10.0"
 
 [[package]]
 name = "neuro-flow"
-version = "23.11.0"
+version = "24.2.0"
 description = "Pipelines system for neu.ro"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "neuro-flow-23.11.0.tar.gz", hash = "sha256:2108b676de86fc114e25e3a24d06221e4e479e48d25f595c2daa40e84c96d885"},
-    {file = "neuro_flow-23.11.0-py3-none-any.whl", hash = "sha256:14f53437f87440592b02e455c32c804af983f87aadcbfa85747bbb8a4e911340"},
+    {file = "neuro-flow-24.2.0.tar.gz", hash = "sha256:9842244210ae2476691e8c9c79c3baf6ab95fb9a86c80df78c94aa69a82646c0"},
+    {file = "neuro_flow-24.2.0-py3-none-any.whl", hash = "sha256:b95d73fdd96609ccd22c816c5af030297f876e932f98a56a916184b2e42e8800"},
 ]
 
 [package.dependencies]
@@ -947,8 +947,8 @@ funcparserlib = ">=1.0.0"
 graphviz = ">=0.14"
 humanize = ">=0.5.1"
 multidict = ">=5.0,<6.0"
-neuro-cli = ">=23.11.0"
-neuro-extras = ">=23.7.0"
+neuro-cli = ">=24.2.0"
+neuro-extras = ">=24.2.0"
 pyyaml = ">=5.4"
 rich = ">=10.0.1"
 typing-extensions = ">=3.10"
@@ -1648,4 +1648,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.0"
-content-hash = "3be081111fe7a56ebe2bfda2575a3e6aa2b6ed96825f3d8f4d043ea36d0204c5"
+content-hash = "9b32a61fabd21ad6fa20979a16e42cff9e72e6e5c654dbef38720c6069b980cd"
