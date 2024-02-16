@@ -5,6 +5,52 @@
 
 [comment]: # (release notes start)
 
+Neuro 24.2.0 (2024-02-16)
+=========================
+
+Neuro SDK/CLI 24.2.0 (2024-02-12)
+=================================
+
+No significant changes.
+
+
+neuro-extras v24.2.0 (2024-02-13)
+=================================
+
+
+Features
+--------
+
+
+- Updated Kaniko to 1.20.0, allowed to provide extra arguments for Kaniko executor. ([#601](https://github.com/neuromation/neuro-extras/issues/601))
+
+
+# Neuro Flow 24.2.0 (2024-02-16)
+
+### Features
+
+- `${{ project.project_name }}` now also configures `volume`'s remote path and `image` reference if the project name was not set.
+
+  If you do not have `project_name` set in `project.yaml`, the volume paths are assumed within your current project configured in CLI.
+  However, if you set `project_name`, this project will be assumed while managing jobs, bakes, volumes, building images etc. within this flow. ([#1081](https://github.com/neuro-inc/neuro-flow/issues/1081))
+- Added support of extra Kaniko arguments while building an image:
+
+  ```
+  images:
+    image_a:
+      ref: image:imagea
+      context: dir
+      dockerfile: dir/Dockerfile
+      extra_kaniko_args: >-
+        --reproducible
+        --cache-ttl=1h
+        --single-snapshot
+  ```
+
+  More details on available arguments could be found in [official Kaniko documentation](https://github.com/GoogleContainerTools/kaniko?tab=readme-ov-file#additional-flags). ([#1110](https://github.com/neuro-inc/neuro-flow/issues/1110))
+
+
+
 Neuro 24.1.0 (2024-01-02)
 =========================
 
