@@ -5,6 +5,19 @@
 
 [comment]: # (release notes start)
 
+Neuro 24.5.0 (2024-05-21)
+=========================
+
+Neuro SDK/CLI 24.5.0 (2024-05-21)
+=================================
+
+Features
+--------
+
+- Support AMD, Intel GPUs ([#3007](https://github.com/neuro-inc/neuro-cli/issues/3007))
+
+
+
 Neuro 24.2.0 (2024-02-16)
 =========================
 
