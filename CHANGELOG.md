@@ -5,6 +5,22 @@
 
 [comment]: # (release notes start)
 
+Neuro 24.5.2 (2024-05-28)
+=========================
+
+neuro-extras v24.5.1 (2024-05-28)
+=================================
+
+
+
+Bugfixes
+--------
+
+- Fix image build in organization when user has no direct access to cluster ([#603](https://github.com/neuro-inc/neuro-extras/pull/603))
+
+
+
+
 Neuro 24.5.1 (2024-05-24)
 =========================
 
