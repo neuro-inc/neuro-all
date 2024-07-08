@@ -5,6 +5,23 @@
 
 [comment]: # (release notes start)
 
+
+Neuro 24.7.0 (2024-07-08)
+=========================
+
+neuro-extras v24.5.2 (2024-05-29)
+=================================
+
+
+
+Bugfixes
+--------
+
+- Fix image cache path -- properly support orgs ([#604](https://github.com/neuro-inc/neuro-extras/pull/604))
+
+
+
+
 Neuro 24.5.2 (2024-05-28)
 =========================
 
