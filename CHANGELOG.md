@@ -5,7 +5,47 @@
 
 [comment]: # (release notes start)
 
+Apolo 24.7.1 (2024-07-28)
+=========================
 
+Renamed packages from Neuro to Apolo
+
+Apolo SDK/CLI 24.7.1 (2024-07-19)
+=================================
+
+No significant changes.
+
+
+Apolo SDK/CLI 24.7.0 (2024-07-19)
+=================================
+
+Features
+--------
+
+- Add update-cluster-user command. ([#3009](https://github.com/neuro-inc/neuro-cli/issues/3009))
+- Rename neuro-cli/neuro-sdk to apolo-cli/apolo-sdk ([#3010](https://github.com/neuro-inc/neuro-cli/pull/3010))
+
+
+apolo-extras v24.7.0 (2024-07-21)
+=================================
+
+
+Misc
+--------
+
+
+- Rename neuro-extras to apolo-extras. ([#605](https://github.com/neuromation/neuro-extras/issues/605))
+
+
+
+# Apolo Flow 24.7.0 (2024-07-26)
+
+No significant changes.
+
+
+
+
+Apolo 24.7.0 (2024-07-08)
 Neuro 24.7.0 (2024-07-08)
 =========================
 
