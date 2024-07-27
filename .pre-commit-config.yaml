@@ -45,17 +45,17 @@ repos:
       docs/spelling_wordlist.txt|
       .gitignore
 - repo: https://github.com/asottile/pyupgrade
-  rev: 'v3.15.2'
+  rev: 'v3.16.0'
   hooks:
   - id: pyupgrade
     args: ['--py36-plus']
 - repo: https://github.com/PyCQA/flake8
-  rev: '7.0.0'
+  rev: '7.1.0'
   hooks:
   - id: flake8
     exclude: "^docs/"
 - repo: https://github.com/rhysd/actionlint
-  rev: v1.7.0
+  rev: v1.7.1
   hooks:
   - id: actionlint-docker
     args:
@@ -66,6 +66,6 @@ repos:
     - -ignore
     - 'SC1004:'
 - repo: https://github.com/sirosen/check-jsonschema
-  rev: 0.28.3
+  rev: 0.29.0
   hooks:
   - id: check-github-actions
