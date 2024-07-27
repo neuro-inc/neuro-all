@@ -6,58 +6,74 @@ on:
     tags: [v*]
   pull_request:
     branches: [master]
-  pull_request_target:
-    branches: [master]
   schedule:
-  - cron: 0 6 * * *       # Daily 6AM UTC build
-
+    - cron: 0 12 * * *
 
 jobs:
-
   lint:
     name: Linter
     runs-on: ubuntu-latest
-    if: |
-      (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]') ||
-      (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]')
     timeout-minutes: 5
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Setup Python 3.9
-      uses: actions/setup-python@v5
-      with:
-        python-version: 3.9
-    - name: Cache pre-commit hooks
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/pre-commit
-        key: pre-commit|py3.9|${{ hashFiles('.pre-commit-config.yaml') }}
-    - name: Cache PyPI
-      uses: actions/cache@v4
-      with:
-        key: lint-${{ hashFiles('pyproject.toml', 'poetry.lock') }}
-        path: ~/.cache/pip
-        restore-keys: |
-          lint-
-    - name: Install dependencies
-      run: |
-        pip install poetry
-        make setup
-    - name: Run linters
-      run: |
-        make lint
-      env:
-        CI_LINT_RUN: 1
-    - name: Save the package version
-      id: version
-      run: |
-        echo "version=$(poetry version --short)" >> $GITHUB_OUTPUT
-    - name: Show version
-      run: |
-        echo ${{ steps.version.outputs.version }}
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.9
+      - name: Cache pre-commit hooks
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit|py3.9|${{ hashFiles('.pre-commit-config.yaml') }}
+      - name: Cache PyPI
+        uses: actions/cache@v4
+        with:
+          key: lint-${{ hashFiles('pyproject.toml', 'poetry.lock') }}
+          path: ~/.cache/pip
+          restore-keys: |
+            lint-
+      - name: Install dependencies
+        run: |
+          pip install poetry
+          make setup
+      - name: Run linters
+        run: |
+          make lint
+        env:
+          CI_LINT_RUN: 1
+      - name: Save the package version
+        id: version
+        run: |
+          echo "version=$(poetry version --short)" >> $GITHUB_OUTPUT
+      - name: Show version
+        run: |
+          echo ${{ steps.version.outputs.version }}
+
+  approve:
+    name: Approve bot PR
+    runs-on: ubuntu-latest
+    if: endsWith(github.actor, '[bot]')
+    needs: lint
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: metadata
+        id: metadata
+        if: github.actor == 'dependabot[bot]'
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Enable auto-merge for bot PRs
+        run: gh pr merge --auto --squash --delete-branch "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
     name: Deploy on PyPI
@@ -67,36 +83,36 @@ jobs:
     # Run only on pushing a tag
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
     steps:
-    - name: Sanity check for tag and version
-      run: |
-        if [ "refs/tags/v${{ needs.lint.outputs.version }}" != "${{ github.ref }}" ]
-        then
-          echo "Tag ${{ github.ref }} mismatches with ${{ needs.lint.outputs.version }}"
-          exit 1
-        else
-          echo "Tag matches version ${{ needs.lint.outputs.version }}"
-        fi
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: 3.9
-    - name: Install poetry
-      run: |
-        pip install poetry
-    - name: Build package
-      run: |
-        poetry build
-    - name: GitHub Release
-      uses: aio-libs/create-release@v1.6.6
-      with:
-        changes_file: CHANGELOG.md
-        name: Neuro
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        pypi_token: ${{ secrets.PYPI_TOKEN }}
-        version: ${{ needs.lint.outputs.version }}
-        start_line: "[comment]: # (release notes start)"
-        head_line: "Neuro {version}\\s+\\({date}\\)\n====+\n?"
-        fix_issue_regex: "\\(\\[#(\\d+)\\]\\(https://github.com/neuro-inc/[^/]+/issues/\\1\\)\\)"
-        fix_issue_repl: "(#\\1)"
+      - name: Sanity check for tag and version
+        run: |
+          if [ "refs/tags/v${{ needs.lint.outputs.version }}" != "${{ github.ref }}" ]
+          then
+            echo "Tag ${{ github.ref }} mismatches with ${{ needs.lint.outputs.version }}"
+            exit 1
+          else
+            echo "Tag matches version ${{ needs.lint.outputs.version }}"
+          fi
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.9
+      - name: Install poetry
+        run: |
+          pip install poetry
+      - name: Build package
+        run: |
+          poetry build
+      - name: GitHub Release
+        uses: aio-libs/create-release@v1.6.6
+        with:
+          changes_file: CHANGELOG.md
+          name: Apolo
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pypi_token: ${{ secrets.PYPI_TOKEN }}
+          version: ${{ needs.lint.outputs.version }}
+          start_line: "[comment]: # (release notes start)"
+          head_line: "Apolo {version}\\s+\\({date}\\)\n====+\n?"
+          fix_issue_regex: "\\(\\[#(\\d+)\\]\\(https://github.com/neuro-inc/[^/]+/issues/\\1\\)\\)"
+          fix_issue_repl: "(#\\1)"

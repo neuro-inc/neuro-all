@@ -10,9 +10,9 @@ from typing import Optional
 
 
 UPSTREAMS = {
-    "neuro-cli": "neuro-cli",
-    "neuro-extras": "neuro-extras",
-    "neuro-flow": "neuro-flow",
+    "neuro-cli": "apolo-cli",
+    "neuro-extras": "apolo-extras",
+    "neuro-flow": "apolo-flow",
 }
 
 
@@ -46,13 +46,13 @@ def update_repos() -> None:
         subprocess.run(["git", "checkout", f"v{ver}"], check=True, cwd=str(path))
 
 
-def fetch(name: str) -> Optional[str]:
+def fetch(name: str, dist: str) -> Optional[str]:
     changelog = Path("cloned") / name / "CHANGELOG.md"
     txt = changelog.read_text()
     TEMPLATE = "[comment]: # (towncrier release notes start)\n"
     idx = txt.index(TEMPLATE)
     right = txt[idx + len(TEMPLATE) :]
-    old = Path(name + ".txt")
+    old = Path(dist + ".txt")
     left = old.read_text()
     matcher = SequenceMatcher(None, left, right)
     for tag, i1, i2, j1, j2 in matcher.get_opcodes():
@@ -69,7 +69,7 @@ def fetch(name: str) -> Optional[str]:
 
 @click.command()
 def main() -> None:
-    print("Install neuro-all")
+    print("Installing apolo-all")
     subprocess.run(
         ["poetry", "install"],
         check=True,
@@ -77,8 +77,8 @@ def main() -> None:
 
     update_repos()
     changes = []
-    for name in UPSTREAMS:
-        ret = fetch(name)
+    for name, dist in UPSTREAMS.items():
+        ret = fetch(name, dist)
         if ret is not None:
             changes.append(ret)
 
@@ -101,7 +101,7 @@ def main() -> None:
     )
     version = proc.stdout.strip()
     date = datetime.date.today().isoformat()
-    header = f"Neuro {version} ({date})\n"
+    header = f"Apolo {version} ({date})\n"
     header += "=" * (len(header) - 1) + "\n"
     changelog.write_text(pre + "\n\n" + header + "".join(changes) + post)
 

@@ -158,6 +158,101 @@ files = [
 frozenlist = ">=1.1.0"
 
 [[package]]
+name = "apolo-cli"
+version = "24.7.1"
+description = "Apolo Platform client"
+optional = false
+python-versions = ">=3.8.0"
+files = [
+    {file = "apolo_cli-24.7.1-py3-none-any.whl", hash = "sha256:0805d001832cf183db4ac95d35540f6b1c0b275a7579f4bfd15c20b60f0e7570"},
+    {file = "apolo_cli-24.7.1.tar.gz", hash = "sha256:812a8704c7585b011b5979bfb242dcf20724c43e73f7d4d9e815df2d9b1a68b9"},
+]
+
+[package.dependencies]
+apolo-sdk = ">=24.7.1"
+async-timeout = {version = ">=4.0.0", markers = "python_version < \"3.11\""}
+certifi = "*"
+click = ">=8.0"
+humanize = ">=3.3"
+jedi = ">=0.16"
+prompt-toolkit = ">=3.0.13"
+python-dateutil = ">=2.7.0"
+python-jose = ">=3.0.0"
+rich = ">=11.0.0"
+typing-extensions = ">=3.7.4"
+wcwidth = ">=0.1.7"
+
+[[package]]
+name = "apolo-extras"
+version = "24.7.0"
+description = ""
+optional = false
+python-versions = ">=3.8.0"
+files = [
+    {file = "apolo-extras-24.7.0.tar.gz", hash = "sha256:eeba6adf5d719a78b98ccec3c5bbf5ff6fce271ad84e6e82304860e33d219302"},
+    {file = "apolo_extras-24.7.0-py3-none-any.whl", hash = "sha256:7e50ef6c9b2fa585c83b4e7222550fbe987497406fb6eff3c284541d171dac81"},
+]
+
+[package.dependencies]
+apolo-cli = ">=24.7.1"
+click = ">=8.0"
+pyyaml = ">=3.0"
+toml = ">=0.10.0"
+
+[[package]]
+name = "apolo-flow"
+version = "24.7.0"
+description = "Pipelines system for Apolo MLOps platform"
+optional = false
+python-versions = ">=3.8.0"
+files = [
+    {file = "apolo_flow-24.7.0-py3-none-any.whl", hash = "sha256:8087f9d795c22e4790929930a75e6de9de84595942d636ec658dbfd6734039e4"},
+    {file = "apolo_flow-24.7.0.tar.gz", hash = "sha256:aa2b02525cc1d5b5a3c054c05f43a21b2901cb2dcb23ec80c30ad25b8c9d29a4"},
+]
+
+[package.dependencies]
+apolo-cli = ">=24.7.1"
+apolo-extras = ">=24.7.0"
+click = ">=8.0"
+funcparserlib = ">=1.0.0"
+graphviz = ">=0.14"
+humanize = ">=0.5.1"
+multidict = ">=5.0,<6.0"
+pyyaml = ">=5.4"
+rich = ">=10.0.1"
+typing-extensions = ">=3.10"
+yarl = ">=1.7"
+
+[[package]]
+name = "apolo-sdk"
+version = "24.7.1"
+description = "Apolo SDK"
+optional = false
+python-versions = ">=3.8.0"
+files = [
+    {file = "apolo_sdk-24.7.1-py3-none-any.whl", hash = "sha256:e41bf8d4bb276631dd4fb1f7a990c494b531a46d9d4c35c0eefd3f0c1ab6ecca"},
+    {file = "apolo_sdk-24.7.1.tar.gz", hash = "sha256:e4c309d46f2301d3348b13f33a898b3229c613fa25fbca4a70c84e63e904954b"},
+]
+
+[package.dependencies]
+aiobotocore = ">=2.3.0,<3.0"
+aiodocker = ">=0.21.0"
+aiohttp = ">=3.8.1"
+azure-storage-blob = ">=12.8.1,<12.9.0 || >12.9.0"
+certifi = "*"
+google-auth = ">=2.0.2"
+importlib-metadata = {version = ">=4.11.4", markers = "python_version < \"3.11\""}
+neuro-admin-client = ">=23.5.0"
+neuro-config-client = ">=24.4.3"
+packaging = ">=20.4"
+python-dateutil = ">=2.7.0"
+python-jose = ">=3.3.0"
+pyyaml = ">=5.0"
+toml = ">=0.10.0"
+typing-extensions = ">=3.7.4"
+yarl = ">=1.7.0,<1.9.0"
+
+[[package]]
 name = "async-timeout"
 version = "4.0.2"
 description = "Timeout context manager for asyncio programs"
@@ -873,31 +968,6 @@ files = [
 aiohttp = ">=3.8.1"
 
 [[package]]
-name = "neuro-cli"
-version = "24.5.0"
-description = "Neuro Platform client"
-optional = false
-python-versions = ">=3.8.0"
-files = [
-    {file = "neuro_cli-24.5.0-py3-none-any.whl", hash = "sha256:2854317eff6ebbe23ec8ecb8fe99eb3741fe562393a9812b947b146cf7417e93"},
-    {file = "neuro_cli-24.5.0.tar.gz", hash = "sha256:e8a93a03678734a3d34605410fa827b452448a8c823f60459d323b6bde81ed25"},
-]
-
-[package.dependencies]
-async-timeout = {version = ">=4.0.0", markers = "python_version < \"3.11\""}
-certifi = "*"
-click = ">=8.0"
-humanize = ">=3.3"
-jedi = ">=0.16"
-neuro-sdk = ">=24.5.0"
-prompt-toolkit = ">=3.0.13"
-python-dateutil = ">=2.7.0"
-python-jose = ">=3.0.0"
-rich = ">=11.0.0"
-typing-extensions = ">=3.7.4"
-wcwidth = ">=0.1.7"
-
-[[package]]
 name = "neuro-config-client"
 version = "24.4.3"
 description = "Internal client for Neu.ro config service"
@@ -912,76 +982,6 @@ files = [
 aiohttp = ">=3.7"
 "backports.zoneinfo" = {version = "*", markers = "python_version < \"3.9\""}
 tzdata = "*"
-
-[[package]]
-name = "neuro-extras"
-version = "24.5.2"
-description = ""
-optional = false
-python-versions = ">=3.8.0"
-files = [
-    {file = "neuro-extras-24.5.2.tar.gz", hash = "sha256:0414b6c042fe6cff2cd3bb3d7e2403cb0a50d41fc92aacd1fad3c846c763f481"},
-    {file = "neuro_extras-24.5.2-py3-none-any.whl", hash = "sha256:bae6f4ba6c9bd770f8db5dee71794d1f7dfdf740dced1e6161950fe44ee22355"},
-]
-
-[package.dependencies]
-click = ">=8.0"
-neuro-cli = ">=24.5.0"
-pyyaml = ">=3.0"
-toml = ">=0.10.0"
-
-[[package]]
-name = "neuro-flow"
-version = "24.2.0"
-description = "Pipelines system for neu.ro"
-optional = false
-python-versions = ">=3.8.0"
-files = [
-    {file = "neuro-flow-24.2.0.tar.gz", hash = "sha256:9842244210ae2476691e8c9c79c3baf6ab95fb9a86c80df78c94aa69a82646c0"},
-    {file = "neuro_flow-24.2.0-py3-none-any.whl", hash = "sha256:b95d73fdd96609ccd22c816c5af030297f876e932f98a56a916184b2e42e8800"},
-]
-
-[package.dependencies]
-click = ">=8.0"
-funcparserlib = ">=1.0.0"
-graphviz = ">=0.14"
-humanize = ">=0.5.1"
-multidict = ">=5.0,<6.0"
-neuro-cli = ">=24.2.0"
-neuro-extras = ">=24.2.0"
-pyyaml = ">=5.4"
-rich = ">=10.0.1"
-typing-extensions = ">=3.10"
-yarl = ">=1.7"
-
-[[package]]
-name = "neuro-sdk"
-version = "24.5.0"
-description = "Neu.ro SDK"
-optional = false
-python-versions = ">=3.8.0"
-files = [
-    {file = "neuro_sdk-24.5.0-py3-none-any.whl", hash = "sha256:56a61e617aec42febcbe796aaafa1ce0d99f38a66085d1bf7eb81d5d6f7503b2"},
-    {file = "neuro_sdk-24.5.0.tar.gz", hash = "sha256:0c9c4259c78bdd47db2e893e176ba97fc8c6c063fbc17d6d34a3b9d89a1cb1ce"},
-]
-
-[package.dependencies]
-aiobotocore = ">=2.3.0,<3.0"
-aiodocker = ">=0.21.0"
-aiohttp = ">=3.8.1"
-azure-storage-blob = ">=12.8.1,<12.9.0 || >12.9.0"
-certifi = "*"
-google-auth = ">=2.0.2"
-importlib-metadata = {version = ">=4.11.4", markers = "python_version < \"3.11\""}
-neuro-admin-client = ">=23.5.0"
-neuro-config-client = ">=24.4.3"
-packaging = ">=20.4"
-python-dateutil = ">=2.7.0"
-python-jose = ">=3.3.0"
-pyyaml = ">=5.0"
-toml = ">=0.10.0"
-typing-extensions = ">=3.7.4"
-yarl = ">=1.7.0,<1.9.0"
 
 [[package]]
 name = "nodeenv"
@@ -1648,4 +1648,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.0"
-content-hash = "3aa08d36e4a0fa3dc2326e2b27c5d8512d7aeafdf52933f4af5c798f66d97919"
+content-hash = "a841a76119c46135921154b4d39915da56d5f3f6ff6f729d5458a4c4c27f6c10"
