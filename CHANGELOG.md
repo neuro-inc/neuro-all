@@ -5,6 +5,37 @@
 
 [comment]: # (release notes start)
 
+Apolo 24.8.0 (2024-08-10)
+=========================
+
+Apolo SDK/CLI 24.8.1 (2024-08-08)
+=================================
+
+No significant changes.
+
+
+Apolo SDK/CLI 24.8.0 (2024-08-08)
+=================================
+
+Misc
+----
+
+- [#3034](https://github.com/neuro-inc/neuro-cli/issues/3034)
+
+
+apolo-extras v24.8.0 (2024-08-09)
+=================================
+
+
+- Publish neuro-extras for backward compatibility too.
+
+
+# Apolo Flow 24.8.0 (2024-08-09)
+
+No significant changes.
+
+
+
 Apolo 24.7.1 (2024-07-28)
 =========================
 

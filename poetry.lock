@@ -159,17 +159,17 @@ frozenlist = ">=1.1.0"
 
 [[package]]
 name = "apolo-cli"
-version = "24.7.1"
+version = "24.8.1"
 description = "Apolo Platform client"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "apolo_cli-24.7.1-py3-none-any.whl", hash = "sha256:0805d001832cf183db4ac95d35540f6b1c0b275a7579f4bfd15c20b60f0e7570"},
-    {file = "apolo_cli-24.7.1.tar.gz", hash = "sha256:812a8704c7585b011b5979bfb242dcf20724c43e73f7d4d9e815df2d9b1a68b9"},
+    {file = "apolo_cli-24.8.1-py3-none-any.whl", hash = "sha256:8140471b77afb582c0d2f521c59ec0eaa5c4fdaa9403c3afdb0a36c4590741f1"},
+    {file = "apolo_cli-24.8.1.tar.gz", hash = "sha256:7acbe8892d6b0622fac02285e90bcddb617b803f153da30b72ed706010952fbd"},
 ]
 
 [package.dependencies]
-apolo-sdk = ">=24.7.1"
+apolo-sdk = ">=24.8.1"
 async-timeout = {version = ">=4.0.0", markers = "python_version < \"3.11\""}
 certifi = "*"
 click = ">=8.0"
@@ -184,30 +184,30 @@ wcwidth = ">=0.1.7"
 
 [[package]]
 name = "apolo-extras"
-version = "24.7.0"
+version = "24.8.0"
 description = ""
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "apolo-extras-24.7.0.tar.gz", hash = "sha256:eeba6adf5d719a78b98ccec3c5bbf5ff6fce271ad84e6e82304860e33d219302"},
-    {file = "apolo_extras-24.7.0-py3-none-any.whl", hash = "sha256:7e50ef6c9b2fa585c83b4e7222550fbe987497406fb6eff3c284541d171dac81"},
+    {file = "apolo_extras-24.8.0-py3-none-any.whl", hash = "sha256:2b0ee32238bd977d7b692e0b361efc1037392865eb7bd4bbcf1e93c3fe328796"},
+    {file = "apolo_extras-24.8.0.tar.gz", hash = "sha256:274f41c14285b0ea4e31d5d3fc204216479dd6656aa76f4c598af6019f074242"},
 ]
 
 [package.dependencies]
-apolo-cli = ">=24.7.1"
+apolo-cli = ">=24.8.1"
 click = ">=8.0"
 pyyaml = ">=3.0"
 toml = ">=0.10.0"
 
 [[package]]
 name = "apolo-flow"
-version = "24.7.0"
+version = "24.8.0"
 description = "Pipelines system for Apolo MLOps platform"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "apolo_flow-24.7.0-py3-none-any.whl", hash = "sha256:8087f9d795c22e4790929930a75e6de9de84595942d636ec658dbfd6734039e4"},
-    {file = "apolo_flow-24.7.0.tar.gz", hash = "sha256:aa2b02525cc1d5b5a3c054c05f43a21b2901cb2dcb23ec80c30ad25b8c9d29a4"},
+    {file = "apolo_flow-24.8.0-py3-none-any.whl", hash = "sha256:27faba6fb96751e6dde25da78f02d0460949b581c720a1ab11d7d65ecdc37939"},
+    {file = "apolo_flow-24.8.0.tar.gz", hash = "sha256:253b2237ce382d38faef8a157b266c1bd59cc9b637f1b30c0ee8c2f2a2137723"},
 ]
 
 [package.dependencies]
@@ -225,13 +225,13 @@ yarl = ">=1.7"
 
 [[package]]
 name = "apolo-sdk"
-version = "24.7.1"
+version = "24.8.1"
 description = "Apolo SDK"
 optional = false
 python-versions = ">=3.8.0"
 files = [
-    {file = "apolo_sdk-24.7.1-py3-none-any.whl", hash = "sha256:e41bf8d4bb276631dd4fb1f7a990c494b531a46d9d4c35c0eefd3f0c1ab6ecca"},
-    {file = "apolo_sdk-24.7.1.tar.gz", hash = "sha256:e4c309d46f2301d3348b13f33a898b3229c613fa25fbca4a70c84e63e904954b"},
+    {file = "apolo_sdk-24.8.1-py3-none-any.whl", hash = "sha256:b8c02168e7bd1f2ca3434ef946fc97fbbb040716de602ba8e7e0a10d1de936fb"},
+    {file = "apolo_sdk-24.8.1.tar.gz", hash = "sha256:5b588ca3b6b3f8aa79338e2a27c3f10ef223d25810c5456fe1affe6e92f27f23"},
 ]
 
 [package.dependencies]
@@ -1648,4 +1648,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.0"
-content-hash = "a841a76119c46135921154b4d39915da56d5f3f6ff6f729d5458a4c4c27f6c10"
+content-hash = "be8fc13955ce59e7014ae1f74447f06b97828b92e387f9183adf9373c575765b"
