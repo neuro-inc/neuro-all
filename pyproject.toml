@@ -48,9 +48,9 @@ neuro-flow = "apolo_flow.cli:main"
 
 [tool.poetry.dependencies]
 python = "^3.9.0"
-apolo-cli = "24.8.1"
-apolo-extras = "24.8.0"
-apolo-flow = "24.8.0"
+apolo-cli = "24.10.0"
+apolo-extras = "24.9.0"
+apolo-flow = "24.10.1"
 certifi = "2024.2.2"
 
 [tool.poetry.dev-dependencies]
