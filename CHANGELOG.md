@@ -5,6 +5,27 @@
 
 [comment]: # (release notes start)
 
+Apolo 24.10.0 (2024-10-11)
+==========================
+
+# Apolo SDK/CLI 24.8.1 (2024-09-18)
+
+No significant changes.
+
+
+apolo-extras v24.9.0 (2024-10-01)
+=================================
+
+
+No significant changes.
+
+
+# Apolo Flow 24.8.0 (2024-10-08)
+
+No significant changes.
+
+
+
 Apolo 24.8.0 (2024-08-10)
 =========================
 

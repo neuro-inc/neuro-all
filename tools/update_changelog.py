@@ -18,7 +18,9 @@ UPSTREAMS = {
 
 def update_repos() -> None:
     for upstream, dist in UPSTREAMS.items():
-        path = Path("cloned") / upstream
+        cloned = Path("cloned")
+        cloned.mkdir(parents=True, exist_ok=True)
+        path = cloned / upstream
         click.secho(f"Sync {upstream}", fg="yellow")
         if not path.exists():
             subprocess.run(

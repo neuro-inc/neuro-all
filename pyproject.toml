@@ -58,6 +58,9 @@ pytest = "8.1.1"
 pre-commit = "^3.5.0"
 click = "^8.1.7"
 
+[tool.poetry.group.dev.dependencies]
+towncrier = "^24.8.0"
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
