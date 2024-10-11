@@ -47,7 +47,7 @@ apolo-flow = "apolo_flow.cli:main"
 neuro-flow = "apolo_flow.cli:main"
 
 [tool.poetry.dependencies]
-python = "^3.8.0"
+python = "^3.9.0"
 apolo-cli = "24.8.1"
 apolo-extras = "24.8.0"
 apolo-flow = "24.8.0"
