@@ -5,6 +5,23 @@
 
 [comment]: # (release notes start)
 
+Apolo 24.10.1 (2024-10-21)
+==========================
+
+# Apolo SDK/CLI 24.10.1 (2024-10-21)
+
+No significant changes.
+
+apolo-extras v24.10.0 (2024-10-21)
+=================================
+
+No significant changes.
+
+# Apolo Flow 24.10.2 (2024-10-21)
+
+No significant changes.
+
+
 Apolo 24.10.0 (2024-10-11)
 ==========================
 
@@ -186,14 +203,14 @@ Features
 
   ```
   images:
-    image_a:
-      ref: image:imagea
-      context: dir
-      dockerfile: dir/Dockerfile
-      extra_kaniko_args: >-
-        --reproducible
-        --cache-ttl=1h
-        --single-snapshot
+	image_a:
+	  ref: image:imagea
+	  context: dir
+	  dockerfile: dir/Dockerfile
+	  extra_kaniko_args: >-
+		--reproducible
+		--cache-ttl=1h
+		--single-snapshot
   ```
 
   More details on available arguments could be found in [official Kaniko documentation](https://github.com/GoogleContainerTools/kaniko?tab=readme-ov-file#additional-flags). ([#1110](https://github.com/neuro-inc/neuro-flow/issues/1110))
@@ -263,7 +280,7 @@ Neuro 23.10.1 (2023-10-18)
   kind: batch
   life_span: 30d
   tasks:
-    ...
+	...
   ``` ([#1075](https://github.com/neuro-inc/neuro-flow/issues/1075))
 
 
@@ -377,7 +394,7 @@ Features
 - Added `hash_files_relative` function to expression, it works same as `hash_files` but requires additional leading
   parameters that defines directory to glob over. It can be used to glob over action files:
   ```
-    ${{ hash_files_relative(flow.action_path, "**/pattern/here/**/*.py", "other/**/pattern")
+	${{ hash_files_relative(flow.action_path, "**/pattern/here/**/*.py", "other/**/pattern")
   ``` ([#904](https://github.com/neuro-inc/neuro-flow/issues/904))
 
 
