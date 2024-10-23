@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "apolo-all"
-version = "24.10.1"
+version = "24.10.2"
 description = "Combo package for installing all Apolo command line tools by 'pipx install apolo-all' command"
 authors = ["Apolo Team <dev@apolo.us>"]
 license = "Apache-2.0"
@@ -50,7 +50,7 @@ neuro-flow = "apolo_flow.cli:main"
 python = "^3.9.0"
 apolo-cli = "24.10.1"
 apolo-extras = "24.10.0"
-apolo-flow = "24.10.2"
+apolo-flow = "24.10.3"
 certifi = "2024.2.2"
 
 [tool.poetry.dev-dependencies]
