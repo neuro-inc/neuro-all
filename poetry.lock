@@ -262,13 +262,13 @@ yarl = ">=1.13"
 
 [[package]]
 name = "apolo-sdk"
-version = "24.10.1"
+version = "24.11.1"
 description = "Apolo SDK"
 optional = false
 python-versions = ">=3.9.0"
 files = [
-    {file = "apolo_sdk-24.10.1-py3-none-any.whl", hash = "sha256:70ed8493c8a56ac348c295b36f4f2ed14dee6e7fe0b53f1818348dc002ffa1c7"},
-    {file = "apolo_sdk-24.10.1.tar.gz", hash = "sha256:b4046a8a691de5b4c500bf322a5dd6056c0db6487ce7860aa51d463b39571cc1"},
+    {file = "apolo_sdk-24.11.1-py3-none-any.whl", hash = "sha256:852acd68f9dc489b2ad8667ddb3199e1a89456c69770e82586459d2b066cc368"},
+    {file = "apolo_sdk-24.11.1.tar.gz", hash = "sha256:175738d32638dd5826e855691e6fae243792c9d7daf681a82c3adcb7af9319bf"},
 ]
 
 [package.dependencies]
@@ -278,9 +278,9 @@ aiohttp = ">=3.9.0"
 azure-storage-blob = ">=12.8.1,<12.9.0 || >12.9.0"
 certifi = "*"
 google-auth = ">=2.0.2"
-importlib-metadata = {version = ">=4.11.4", markers = "python_version < \"3.11\""}
+importlib_metadata = {version = ">=4.11.4", markers = "python_version < \"3.11\""}
 neuro-admin-client = ">=23.5.0"
-neuro-config-client = ">=24.4.3"
+neuro-config-client = ">=24.11.0"
 packaging = ">=20.4"
 python-dateutil = ">=2.7.0"
 python-jose = ">=3.3.0"
@@ -1269,13 +1269,13 @@ aiohttp = ">=3.8.1"
 
 [[package]]
 name = "neuro-config-client"
-version = "24.10.1"
+version = "24.11.0"
 description = "Internal client for Neu.ro config service"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "neuro_config_client-24.10.1-py3-none-any.whl", hash = "sha256:914e6dcbae0bf3d5edb876416bb01ad044a892bbbcb7c67374ca525945c03d77"},
-    {file = "neuro_config_client-24.10.1.tar.gz", hash = "sha256:74a31a14bf46829455946a9cf61b05f679743154a8fa6602e12bfabae1aac9e8"},
+    {file = "neuro_config_client-24.11.0-py3-none-any.whl", hash = "sha256:3acd5c4e85d25b1495b0bdd7c541ba8a61b77e6569f16a6a3ae208407122bf9f"},
+    {file = "neuro_config_client-24.11.0.tar.gz", hash = "sha256:b5d36c07793a10e0bfa0fb70bb3b2f2ee645b32671f0e06e3bf1a4493f282865"},
 ]
 
 [package.dependencies]
