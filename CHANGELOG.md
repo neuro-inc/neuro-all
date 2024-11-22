@@ -5,6 +5,20 @@
 
 [comment]: # (release notes start)
 
+Apolo 24.11.0 (2024-11-22)
+==========================
+
+# Apolo SDK/CLI 24.11.1 (2024-11-21)
+
+No significant changes.
+
+
+# Apolo SDK/CLI 24.11.0 (2024-11-07)
+
+No significant changes.
+
+
+
 Apolo 24.10.2 (2024-10-23)
 ==========================
 
